@@ -1,0 +1,366 @@
+section {
+    animation: sectionFade 1s ease-out;
+}
+
+@keyframes sectionFade {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* 2. Navbar link hover animation */
+
+.navbar a {
+    position: relative;
+}
+
+.navbar a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--bg-color);
+    transition: width 0.3s ease;
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+
+
+/* 3. Social media icons bounce on hover */
+
+.social-media a {
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.social-media a:hover {
+    transform: scale(1.2) translateY(-8px) rotate(360deg);
+}
+
+
+/* 4. Button pulse effect */
+
+.btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.btn:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+
+/* 5. Service cards float animation */
+
+.services-box {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.services-box:hover {
+    transform: translateY(-15px) scale(1.02);
+}
+
+
+/* 6. Project cards slide up */
+
+.project-card {
+    transition: all 0.4s ease;
+    position: relative;
+    top: 0;
+}
+
+.project-card:hover {
+    top: -10px;
+    box-shadow: 0 20px 30px rgba(69, 40, 41, 0.15);
+}
+
+
+/* 7. Image pulse glow on hover */
+
+.home-img img,
+.about-img img {
+    transition: all 0.4s ease;
+}
+
+.home-img img:hover,
+.about-img img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 30px var(--main-color), 0 0 50px rgba(69, 40, 41, 0.3);
+}
+
+
+/* 8. Typed text cursor animation */
+
+.typed-cursor {
+    animation: blink 1s infinite;
+    color: var(--main-color);
+    font-size: 3.7rem;
+}
+
+@keyframes blink {
+    0%,
+    100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+
+/* 9. Certification cards pop effect */
+
+.testimonial-item {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.testimonial-item:hover {
+    transform: scale(1.03);
+    box-shadow: 0 15px 30px rgba(69, 40, 41, 0.1);
+}
+
+
+/* 10. Footer social icons spin */
+
+.footer .social a {
+    transition: all 0.4s ease;
+}
+
+.footer .social a:hover {
+    transform: rotate(360deg) scale(1.2);
+}
+
+
+/* 11. Form input focus animation */
+
+.contact form .input-box input,
+.contact form textarea {
+    transition: all 0.3s ease;
+    border-width: 0.2rem;
+}
+
+.contact form .input-box input:focus,
+.contact form textarea:focus {
+    transform: translateY(-3px);
+    border-width: 0.25rem;
+    box-shadow: 0 5px 20px rgba(69, 40, 41, 0.1);
+}
+
+
+/* 12. Logo hover effect */
+
+.logo {
+    transition: all 0.3s ease;
+}
+
+.logo:hover {
+    letter-spacing: 3px;
+    text-shadow: 0 0 15px var(--bg-color);
+}
+
+
+/* 13. Skills icons rotation on hover */
+
+.services-box i {
+    transition: transform 0.5s ease;
+}
+
+.services-box:hover i {
+    transform: rotate(360deg) scale(1.1);
+}
+
+
+/* 14. Project tech tags slide in */
+
+.project-tech span {
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-tech span:hover {
+    background: var(--main-color);
+    color: var(--bg-color);
+    transform: translateY(-3px);
+}
+
+
+/* 15. Menu icon animation */
+
+#menu_icon {
+    transition: transform 0.3s ease;
+}
+
+#menu_icon:hover {
+    transform: scale(1.1);
+}
+
+.bx-x {
+    animation: rotateMenu 0.3s ease;
+}
+
+@keyframes rotateMenu {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(180deg);
+    }
+}
+
+
+/* 16. Home content staggered fade in - no HTML changes */
+
+.home-content h3:nth-child(1) {
+    animation: fadeInLeft 0.8s ease;
+}
+
+.home-content h1 {
+    animation: fadeInRight 0.8s ease 0.2s both;
+}
+
+.home-content h3:nth-child(3) {
+    animation: fadeInLeft 0.8s ease 0.4s both;
+}
+
+.home-content p {
+    animation: fadeInUp 0.8s ease 0.6s both;
+}
+
+.social-media {
+    animation: fadeInUp 0.8s ease 0.8s both;
+}
+
+.home-content .btn {
+    animation: fadeInUp 0.8s ease 1s both;
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* 17. Section title underline animation */
+
+.heading {
+    position: relative;
+    display: inline-block;
+}
+
+.heading::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 0;
+    height: 4px;
+    background: var(--main-color);
+    animation: titleUnderline 4s ease forwards 0.5s;
+}
+
+@keyframes titleUnderline {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 80px;
+    }
+}
+
+
+/* 18. Mobile menu slide animation - already in your code, just add this */
+
+.navbar.active {
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+/* 19. Scroll to top smooth - you already have scroll-behavior: smooth */
+
+
+/* Just adding a subtle indicator */
+
+html {
+    scroll-padding-top: 80px;
+}
+
+
+/* 20. Loading animation for images */
+
+img {
+    animation: imageLoad 0.8s ease;
+}
+
+@keyframes imageLoad {
+    0% {
+        opacity: 0;
+        filter: blur(10px);
+    }
+    100% {
+        opacity: 1;
+        filter: blur(0);
+    }
+}
