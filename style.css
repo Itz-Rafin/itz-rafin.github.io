@@ -1,4 +1,4 @@
-    * {
+        * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
@@ -295,6 +295,20 @@
         text-align: center;
     }
     
+    .services p {
+        text-align: center;
+        font-size: 1.8rem;
+        margin-bottom: 3rem;
+        color: var(--text-color);
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .services p strong {
+        color: var(--main-color);
+    }
+    
     .services-container {
         display: flex;
         justify-content: center;
@@ -393,6 +407,16 @@
     .projects h2 {
         text-align: center;
         margin-bottom: 5rem;
+    }
+    
+    .projects p {
+        text-align: center;
+        font-size: 1.8rem;
+        margin-bottom: 4rem;
+        color: var(--text-color);
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
     }
     
     .projects-container {
@@ -741,5 +765,24 @@
         }
         .project-card p {
             font-size: 1.4rem;
+        }
+        .footer .social {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            padding: 0 1rem;
+        }
+        .footer .social a {
+            margin: 0.5rem;
+            width: 38px;
+            height: 38px;
+            font-size: 2rem;
+            line-height: 38px;
+        }
+        .footer .social {
+            max-width: 200px;
+            margin: 0 auto;
         }
     }
