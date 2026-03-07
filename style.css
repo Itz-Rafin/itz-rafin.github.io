@@ -768,6 +768,7 @@
         font-size: 1.6rem;
         margin: 1rem 0 1rem;
         line-height: 1.6;
+        text-align: center;
     }
     
     .services-box {
@@ -1209,6 +1210,7 @@
             margin: 0 auto;
         }
     }
+
 
 
 
