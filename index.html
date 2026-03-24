@@ -7,15 +7,63 @@
     <meta name="author" content="Itz_Rafin">
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <title>Rafin Azim - Portfolio</title>
 </head>
 <body>
-<!--Header section-->
 
+<!-- ── LOADING SCREEN ── -->
+<div id="loader">
+  <div class="loader-wrap">
+    <div class="loader-rings-scene">
+      <div class="loader-plate"></div>
+      <svg class="loader-ring-svg" viewBox="0 0 200 200">
+        <circle fill="none" stroke="rgba(255,215,0,0.06)" stroke-width="1" cx="100" cy="100" r="90"/>
+        <circle fill="none" stroke="rgba(255,215,0,0.04)" stroke-width="1" cx="100" cy="100" r="70"/>
+        <circle class="l-ri" cx="100" cy="100" r="60"/>
+        <circle class="l-rm" cx="100" cy="100" r="75"/>
+        <circle class="l-ro" cx="100" cy="100" r="90" id="outer-ring"/>
+      </svg>
+      <div class="loader-bracket tl"></div>
+      <div class="loader-bracket tr"></div>
+      <div class="loader-bracket bl"></div>
+      <div class="loader-bracket br"></div>
+      <div class="loader-initials">RA</div>
+    </div>
+    <div class="loader-bottom">
+      <div class="loader-name-block" id="loader-name">
+        <div class="loader-brand">Itz_Rafin</div>
+        <div class="loader-underline"></div>
+        <div class="loader-tagline">Rafin Azim · Portfolio</div>
+      </div>
+      <div class="loader-prog-wrap" id="loader-prog">
+        <div class="loader-prog-track">
+          <div class="loader-prog-fill"></div>
+        </div>
+        <div class="loader-prog-label">
+          <span>Initializing</span>
+          <span id="loader-pct">0%</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Header section-->
 <header class="header">
-    
-    <a href="#home" class="logo">Itz_Rafin</a>
+    <a href="#home" class="logo" id="logo-btn">
+      <span class="logo-rings-mini">
+        <svg viewBox="0 0 40 40" width="40" height="40">
+          <circle fill="rgba(0,0,0,0.18)" cx="20" cy="20" r="18"/>
+          <circle fill="none" stroke="rgba(0,0,0,0.2)" stroke-width="1" cx="20" cy="20" r="17"/>
+          <circle class="mini-rm" fill="none" stroke="rgba(0,0,0,0.45)" stroke-width="1.2" stroke-dasharray="7 10" cx="20" cy="20" r="13"/>
+          <circle class="mini-ri" fill="none" stroke="rgba(0,0,0,0.25)" stroke-width="0.8" stroke-dasharray="3 10" cx="20" cy="20" r="9"/>
+          <text x="50%" y="52%" dominant-baseline="middle" text-anchor="middle" font-size="9.5" font-weight="800" fill="var(--bg-color)" font-family="system-ui" letter-spacing="1">RA</text>
+        </svg>
+      </span>
+      Itz_Rafin
+    </a>
     <i class='bx bx-menu' id="menu_icon"></i>
 
     <nav class="navbar">
@@ -25,12 +73,15 @@
         <a href="#services">Skills</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
-
     </nav>
+    <button id="theme-toggle" aria-label="Toggle theme">
+        <i class='bx bx-moon' id="theme-icon"></i>
+    </button>
 </header>
 
 <!-- home section-->
 <section class="home" id="home">
+    <canvas id="galaxy-bg"></canvas>
     <div class="home-img">
         <img src="images/rafin1.jpg" alt="Profile Image" loading="lazy">
     </div>
@@ -39,7 +90,7 @@
         <h1>Rafin Azim</h1>
         <h3>And I'm a <span class="multiple-text"></span></h3>
 <p>
-I build web and software projects. 
+I build web and software projects.
 Passionate about learning new technologies and turning ideas into real solutions.
 </p>
 
@@ -61,7 +112,7 @@ Passionate about learning new technologies and turning ideas into real solutions
         <h2 class="heading">About <span>Me</span></h2>
         <h3>Computer Science Student & <span>Aspiring Developer</span></h3>
         <p>I'm currently pursuing my B.Sc. in Computer Science and Engineering from <a href="https://uap-bd.edu/" target="_blank"><strong>University of Asia Pacific</strong></a>, where I'm building a strong foundation in algorithms, data structures, and software development principles.</p>
-        <p>With a solid foundation in <strong>Java OOP</strong>, <strong>Python</strong>, and <strong>C</strong>, I enjoy diving deep into software engineering principles. 
+        <p>With a solid foundation in <strong>Java OOP</strong>, <strong>Python</strong>, and <strong>C</strong>, I enjoy diving deep into software engineering principles.
             I am continuously learning new technologies to build scalable and impactful applications that improve lives.</p>
 
             <div class="cert-badges">
@@ -85,9 +136,9 @@ Passionate about learning new technologies and turning ideas into real solutions
         <img src="images/Rafin%20azim.jpg" alt="About Image">
     </div>
 
-    
 
-   
+
+
 </section>
 
 <!-- Education Section -->
@@ -110,14 +161,14 @@ Passionate about learning new technologies and turning ideas into real solutions
             <div class="item-corner top-right"></div>
             <div class="item-corner bottom-left"></div>
             <div class="item-corner bottom-right"></div>
-            
+
             <div class="item-badge">Current</div>
-            
+
             <div class="item-icon">
                 <i class='bx bxs-graduation'></i>
                 <div class="icon-ring"></div>
             </div>
-            
+
             <div class="item-content">
                 <div class="item-meta">
                     <span class="meta-date">
@@ -126,11 +177,11 @@ Passionate about learning new technologies and turning ideas into real solutions
                     </span>
                     <span class="meta-status ongoing">In Progress</span>
                 </div>
-                
+
                 <h3 class="item-title">Bachelor's in Computer Science</h3>
                 <p class="item-institution">University of Asia Pacific</p>
                 <p class="item-description">Currently pursuing undergraduate degree with focus on Computer Science and Engineering</p>
-                
+
                 <div class="item-progress">
                     <div class="progress-info">
                         <span>Progress</span>
@@ -149,12 +200,12 @@ Passionate about learning new technologies and turning ideas into real solutions
             <div class="item-corner top-right"></div>
             <div class="item-corner bottom-left"></div>
             <div class="item-corner bottom-right"></div>
-            
+
             <div class="item-icon">
                 <i class='bx bxs-school'></i>
                 <div class="icon-ring"></div>
             </div>
-            
+
             <div class="item-content">
                 <div class="item-meta">
                     <span class="meta-date">
@@ -163,11 +214,11 @@ Passionate about learning new technologies and turning ideas into real solutions
                     </span>
                     <span class="meta-status completed">Completed</span>
                 </div>
-                
+
                 <h3 class="item-title">Higher Secondary Certificate (HSC)</h3>
                 <p class="item-institution">Begum Badrunnesa Govt. Girls' College</p>
                 <p class="item-description">Completed Higher Secondary Education in Science group</p>
-                
+
                 <div class="item-achievement">
                     <i class='bx bx-medal'></i>
                     <span>Science Group</span>
@@ -181,12 +232,12 @@ Passionate about learning new technologies and turning ideas into real solutions
             <div class="item-corner top-right"></div>
             <div class="item-corner bottom-left"></div>
             <div class="item-corner bottom-right"></div>
-            
+
             <div class="item-icon">
                 <i class='bx bxs-book-open'></i>
                 <div class="icon-ring"></div>
             </div>
-            
+
             <div class="item-content">
                 <div class="item-meta">
                     <span class="meta-date">
@@ -195,11 +246,11 @@ Passionate about learning new technologies and turning ideas into real solutions
                     </span>
                     <span class="meta-status completed">Completed</span>
                 </div>
-                
+
                 <h3 class="item-title">Secondary School Certificate (SSC)</h3>
                 <p class="item-institution">Keraniganj Girls School and College</p>
                 <p class="item-description">Completed Secondary Education with distinction</p>
-                
+
                 <div class="item-achievement">
                     <i class='bx bx-trophy'></i>
                     <span>Science Group</span>
@@ -207,7 +258,7 @@ Passionate about learning new technologies and turning ideas into real solutions
             </div>
         </div>
     </div>
-    
+
     <!-- Timeline Indicator -->
     <div class="timeline-indicator">
         <div class="timeline-track">
@@ -220,7 +271,7 @@ Passionate about learning new technologies and turning ideas into real solutions
             <div class="point" data-year="2027">Graduation</div>
         </div>
     </div>
-</section>    
+</section>
 
 <!-- Service section code  -->
 
@@ -232,7 +283,7 @@ Passionate about learning new technologies and turning ideas into real solutions
     <div class="services-container">
 
         <div class="services-box">
-            
+
             <i class='bx bxl-python'></i>
             <h3>Python</h3>
             <p>Object-oriented programming, data structures, and problem solving. Strong foundation in Python basics and OOP concepts.</p>
@@ -316,8 +367,8 @@ Passionate about learning new technologies and turning ideas into real solutions
 <section class="projects" id="projects">
     <h2 class="heading">My <span>Projects</span></h2>
 
-    <p> These are the small backend projects I've built during my <strong style="color: var(--main-color);">first 2 years</strong> of university. 
-        Each project demonstrates core computer science concepts I learned in the classroom 
+    <p> These are the small backend projects I've built during my <strong style="color: var(--main-color);">first 2 years</strong> of university.
+        Each project demonstrates core computer science concepts I learned in the classroom
         — OOP, data structures, file handling, and API integration.
     </p>
 
@@ -435,7 +486,7 @@ Passionate about learning new technologies and turning ideas into real solutions
         </div>
 
     </div>
-    
+
     <!-- View all on GitHub button -->
     <div class="projects-more">
         <a href="https://github.com/Itz-Rafin" target="_blank" class="btn">
@@ -471,9 +522,9 @@ Passionate about learning new technologies and turning ideas into real solutions
         <input type="submit" value="Send Message" class="btn">
     </form>
 
-    
 
-    
+
+
 
 </section>
 
@@ -484,7 +535,7 @@ Passionate about learning new technologies and turning ideas into real solutions
             <a href="https://github.com/Itz-Rafin" target="_blank"><i class='bx bxl-github'></i></a>
             <a href="https://www.facebook.com/farzana.azim.3114/" target="_blank"><i class='bx bxl-facebook' ></i></a>
             <a href="https://www.instagram.com/itz_rafin_azim/" target="_blank"><i class='bx bxl-instagram' ></i></a>
-            <a href="mailto:23201227@uap-bd.edu"><i class='bx bx-envelope'></i></a>
+            <a href="/cdn-cgi/l/email-protection#f0c2c3c2c0c1c2c2c7b0859180dd9294de959485"><i class='bx bx-envelope'></i></a>
             <a href="https://wa.me/8801880225076" target="_blank"><i class='bx bxl-whatsapp'></i></a>
 
     </div>
@@ -493,12 +544,53 @@ Passionate about learning new technologies and turning ideas into real solutions
         <br>Created by Rafin Azim</br>
     </p>
 
-  
+
 </footer>
-<script src="https://unpkg.com/typed.js@3.0.0/dist/typed.umd.js"></script>
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 <script src="script.js"></script>
+
+<!-- ── AI CHATBOT ── -->
+<button class="chat-fab" id="chatFab" aria-label="Chat with Rafin's AI">
+  <i class='bx bx-message-rounded-dots' id="chatFabIcon"></i>
+  <span class="chat-fab-dot"></span>
+</button>
+
+<div class="chat-window" id="chatWindow">
+  <div class="chat-header">
+    <div class="chat-avatar-wrap">
+      <div class="chat-avatar">RA</div>
+      <span class="chat-online"></span>
+    </div>
+    <div class="chat-header-info">
+      <div class="chat-header-name">Rafin Azim <span class="chat-ai-badge">AI</span></div>
+      <div class="chat-header-sub">Ask me anything about myself!</div>
+    </div>
+    <button class="chat-close-btn" id="chatClose" aria-label="Close chat">
+      <i class='bx bx-x'></i>
+    </button>
+  </div>
+
+  <div class="chat-messages" id="chatMessages">
+    <div class="chat-msg bot">
+      <div class="chat-bubble">Hey! 👋 I'm Rafin. Ask me anything — my skills, projects, education, or how to reach me!</div>
+      <div class="chat-time">Just now</div>
+    </div>
+  </div>
+
+  <div class="chat-quick-replies" id="chatQuickReplies">
+    <button class="chat-qr" data-q="What are your skills?">Skills</button>
+    <button class="chat-qr" data-q="Tell me about your projects">Projects</button>
+    <button class="chat-qr" data-q="Where do you study?">Education</button>
+    <button class="chat-qr" data-q="How can I contact you?">Contact</button>
+  </div>
+
+  <div class="chat-input-row">
+    <input class="chat-input" id="chatInput" placeholder="Ask Rafin anything..." autocomplete="off"/>
+    <button class="chat-send-btn" id="chatSendBtn" aria-label="Send">
+      <i class='bx bx-send'></i>
+    </button>
+  </div>
+</div>
 
 </body>
 </html>
-
-
