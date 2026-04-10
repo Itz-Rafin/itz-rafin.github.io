@@ -19,10 +19,10 @@
 }
 
 [data-theme="light"] {
-    --bg-color: #8E977D;
-    --snd-bg-color: #8A7650;
-    --text-color: #DBCEA5;
-    --main-color: #ECE7D1;
+    --bg-color: #FF9644;
+    --snd-bg-color: #FFCE99;
+    --text-color: black;
+    --main-color: #562F00;
 }
 
 html {
